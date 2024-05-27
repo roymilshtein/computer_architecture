@@ -1,0 +1,9 @@
+add_nr_units = 1
+mul_nr_units = 1
+div_nr_units = 1
+add_nr_reservation = 3
+mul_nr_reservation = 2
+div_nr_reservation = 2
+add_delay = 2
+mul_delay = 3
+div_delay = 5
