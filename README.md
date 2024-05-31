@@ -67,6 +67,7 @@ Stores data for each CDB write including `cycle`, `pc`, `cdb_type`, `data`, and 
 - `is_ready_for_execution`: Checks if a station has the values needed for execution.
 - `compare_pc`: Compares PCs to determine execution order.
 - `find_free_unit`: Finds a free functional unit by type.
+- additional helper functions are shown in the documentation file
 
 ## Testing
 Three test folders (`Test1`, `Test2`, `Test3`) containing:
