@@ -1,4 +1,3 @@
-# computer_architecture
 # CPU Simulator with Tomasulo Algorithm
 
 This project simulates a CPU using the Tomasulo Algorithm, allowing configurable functional units, reservation stations, and unit delays.
