@@ -7,6 +7,13 @@ The main objective is to implement a CPU simulator where:
 - The number of functional units and reservation stations are configurable.
 - Units' delays can be set via configuration files.
 
+## Testing
+Three test folders (`Test1`, `Test2`, `Test3`) containing:
+- Input files: `cfg.txt`, `memin.txt`
+- Output files: `regout.txt`, `traceinst.txt`, `tracecdb.txt`
+
+Each test focuses on specific scenarios to validate the simulator's correctness.
+
 ## Key Definitions
 - **Registers**: 16
 - **Memory Lines**: 4096
@@ -68,13 +75,6 @@ Stores data for each CDB write including `cycle`, `pc`, `cdb_type`, `data`, and 
 - `compare_pc`: Compares PCs to determine execution order.
 - `find_free_unit`: Finds a free functional unit by type.
 - additional helper functions are shown in the documentation file
-
-## Testing
-Three test folders (`Test1`, `Test2`, `Test3`) containing:
-- Input files: `cfg.txt`, `memin.txt`
-- Output files: `regout.txt`, `traceinst.txt`, `tracecdb.txt`
-
-Each test focuses on specific scenarios to validate the simulator's correctness.
 
 ---
 
