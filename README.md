@@ -14,6 +14,23 @@ Three test folders (`Test1`, `Test2`, `Test3`) containing:
 
 Each test focuses on specific scenarios to validate the simulator's correctness.
 
+## Simulator Workflow
+### Initialization
+1. Extract variables from `cfg.txt`.
+2. Read instructions from `memin.txt`.
+3. Initialize free functional units and build reservation stations.
+4. Initialize instruction queue and registers.
+
+### While Loop (Each Iteration = 1 Clock Cycle)
+1. **Fetch Stage**: Fetch up to 2 instructions if slots are available and `halt` is not fetched.
+2. **Issue Stage**: Assign instructions to reservation stations.
+3. **Execute Stage**: Execute ready instructions in available functional units.
+4. **Write Result Stage**: Write results to CDB, update registers, and clear stations.
+
+### Closing and Stopping
+1. Print output files (`regout.txt`, `traceinst.txt`, `tracecdb.txt`).
+2. Free allocated memory and exit.
+
 ## Key Definitions
 - **Registers**: 16
 - **Memory Lines**: 4096
@@ -49,23 +66,6 @@ Stores data for each CDB write including `cycle`, `pc`, `cdb_type`, `data`, and 
 - `trace_cdb[MAX_MEMIN_LINES]`: Trace CDB items array.
 - Functional units and reservation stations arrays for ADD, MUL, and DIV operations.
 - Three CDBs: `add_cdb`, `mul_cdb`, and `div_cdb`.
-
-## Simulator Workflow
-### Initialization
-1. Extract variables from `cfg.txt`.
-2. Read instructions from `memin.txt`.
-3. Initialize free functional units and build reservation stations.
-4. Initialize instruction queue and registers.
-
-### While Loop (Each Iteration = 1 Clock Cycle)
-1. **Fetch Stage**: Fetch up to 2 instructions if slots are available and `halt` is not fetched.
-2. **Issue Stage**: Assign instructions to reservation stations.
-3. **Execute Stage**: Execute ready instructions in available functional units.
-4. **Write Result Stage**: Write results to CDB, update registers, and clear stations.
-
-### Closing and Stopping
-1. Print output files (`regout.txt`, `traceinst.txt`, `tracecdb.txt`).
-2. Free allocated memory and exit.
 
 ## Helper Functions
 - `safe_file_open`: Opens a file and checks for errors.
