@@ -2,6 +2,8 @@
 
 This project simulates a CPU using the Tomasulo Algorithm, allowing configurable functional units, reservation stations, and unit delays.
 
+![Project Overview](Schematic.png)
+
 ## Project Goals
 The main objective is to implement a CPU simulator where:
 - The number of functional units and reservation stations are configurable.
